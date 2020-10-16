@@ -87,7 +87,7 @@
   width: var(--lg-padding-y);
   // left: var(--arrow-l-left);
   // Edit by Aman
-  right: var(--arrow-l-left);
+  right: .5rem;
   // End
   [dir="rtl"] & {
     right: var(--arrow-r-left);
