@@ -39,6 +39,11 @@ class ActionsBar extends PureComponent {
     );
     Session.set('idChatOpen', '');
   }
+
+  componentDidMount() {
+    ActionsBar.handleToggleUserList;
+  }
+
   render() {
     const {
       amIPresenter,
