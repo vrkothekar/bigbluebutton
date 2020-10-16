@@ -85,18 +85,7 @@ class ActionsBar extends PureComponent {
             stopExternalVideoShare,
             isMeteorConnected,
           }}
-          /> */}
-          <DesktopShare {...{
-            handleShareScreen,
-            handleUnshareScreen,
-            isVideoBroadcasting,
-            amIPresenter,
-            screenSharingCheck,
-            screenShareEndAlert,
-            isMeteorConnected,
-            screenshareDataSavingSetting,
-          }}
-          />
+          /> */}          
           {isPollingEnabled
             ? (
               <QuickPollDropdown
@@ -135,6 +124,17 @@ class ActionsBar extends PureComponent {
             )
             : null
           }
+          <DesktopShare {...{
+            handleShareScreen,
+            handleUnshareScreen,
+            isVideoBroadcasting,
+            amIPresenter,
+            screenSharingCheck,
+            screenShareEndAlert,
+            isMeteorConnected,
+            screenshareDataSavingSetting,
+          }}
+          />
           <Button
               data-test="userListToggleButton"
               onClick={ActionsBar.handleToggleUserList}
