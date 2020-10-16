@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Session } from 'meteor/session';
 import cx from 'classnames';
 import { styles } from './styles.scss';
+
 import DesktopShare from './desktop-share/component';
 // import ActionsDropdown from './actions-dropdown/component';
 import QuickPollDropdown from './quick-poll-dropdown/component';
@@ -10,7 +11,9 @@ import JoinVideoOptionsContainer from '../video-provider/video-button/container'
 import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions/container';
 import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
+
 import { defineMessages } from 'react-intl';
+import { navstyles } from '../nav-bar/styles.scss';
 
 const intlMessages = defineMessages({
   toggleUserListLabel: {
@@ -69,6 +72,9 @@ class ActionsBar extends PureComponent {
     actionBarClasses[styles.center] = true;
     actionBarClasses[styles.mobileLayoutSwapped] = isLayoutSwapped && amIPresenter;
 
+    const toggleBtnClasses = {};
+    toggleBtnClasses[navstyles.btn] = true;
+
     let ariaLabel = intl.formatMessage(intlMessages.toggleUserListAria);
 
     return (
@@ -85,7 +91,7 @@ class ActionsBar extends PureComponent {
             stopExternalVideoShare,
             isMeteorConnected,
           }}
-          /> */}          
+          /> */}
           {isPollingEnabled
             ? (
               <QuickPollDropdown
@@ -144,7 +150,7 @@ class ActionsBar extends PureComponent {
               label={intl.formatMessage(intlMessages.toggleUserListLabel)}
               aria-label={ariaLabel}
               icon="user"
-              className={styles.button}
+              className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
             />
