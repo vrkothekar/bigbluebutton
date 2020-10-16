@@ -41,7 +41,7 @@ class ActionsBar extends PureComponent {
   }
 
   componentDidMount() {
-    ActionsBar.handleToggleUserList;
+    ActionsBar.handleToggleUserList();
   }
 
   render() {
