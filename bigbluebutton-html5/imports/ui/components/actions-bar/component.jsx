@@ -11,6 +11,21 @@ import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions
 import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
 
+const intlMessages = defineMessages({
+  toggleUserListLabel: {
+    id: 'app.navBar.userListToggleBtnLabel',
+    description: 'Toggle button label',
+  },
+  toggleUserListAria: {
+    id: 'app.navBar.toggleUserList.ariaLabel',
+    description: 'description of the lists inside the userlist',
+  },
+  newMessages: {
+    id: 'app.navBar.toggleUserList.newMessages',
+    description: 'label for toggleUserList btn when showing red notification',
+  },
+});
+
 class ActionsBar extends PureComponent {
   static handleToggleUserList() {
     Session.set(
@@ -52,6 +67,8 @@ class ActionsBar extends PureComponent {
     actionBarClasses[styles.centerWithActions] = amIPresenter;
     actionBarClasses[styles.center] = true;
     actionBarClasses[styles.mobileLayoutSwapped] = isLayoutSwapped && amIPresenter;
+
+    let ariaLabel = intl.formatMessage(intlMessages.toggleUserListAria);
 
     return (
       <div className={styles.actionsbar}>
@@ -123,8 +140,8 @@ class ActionsBar extends PureComponent {
               ghost
               circle
               hideLabel
-              // label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              // aria-label={ariaLabel}
+              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+              aria-label={ariaLabel}
               icon="user"
               // className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
