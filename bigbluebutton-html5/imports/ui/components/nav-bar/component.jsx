@@ -105,7 +105,7 @@ class NavBar extends PureComponent {
           <div className={styles.right}>
             {/* <SettingsDropdownContainer amIModerator={amIModerator} /> */}
             {!isExpanded ? null
-              : <Icon iconName="left_arrow" className={styles.arrowLeft} />
+              : <Icon iconName="right_arrow" className={styles.arrowLeft} />
             }
             <Button
               data-test="userListToggleButton"
@@ -121,7 +121,7 @@ class NavBar extends PureComponent {
               accessKey={TOGGLE_USERLIST_AK}
             />
             {isExpanded ? null
-              : <Icon iconName="right_arrow" className={styles.arrowRight} />
+              : <Icon iconName="left_arrow" className={styles.arrowRight} />
             }
           </div>
         </div>
