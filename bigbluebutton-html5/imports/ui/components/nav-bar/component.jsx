@@ -105,7 +105,8 @@ class NavBar extends PureComponent {
               aria-label={ariaLabel}
               icon="user"
               className={cx(toggleBtnClasses)}
-              aria-expanded={isExpanded}
+              // aria-expanded={isExpanded}
+              aria-expanded={false}
               accessKey={TOGGLE_USERLIST_AK}
             />
             {isExpanded ? null
