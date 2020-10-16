@@ -13,7 +13,6 @@ import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
 
 import { defineMessages } from 'react-intl';
-import { navstyles } from '../nav-bar/styles.scss';
 
 const intlMessages = defineMessages({
   toggleUserListLabel: {
@@ -73,8 +72,7 @@ class ActionsBar extends PureComponent {
     actionBarClasses[styles.mobileLayoutSwapped] = isLayoutSwapped && amIPresenter;
 
     const toggleBtnClasses = {};
-    toggleBtnClasses[navstyles.btn] = true;
-
+    toggleBtnClasses[styles.btn] = true;
     let ariaLabel = intl.formatMessage(intlMessages.toggleUserListAria);
 
     return (
@@ -150,7 +148,7 @@ class ActionsBar extends PureComponent {
               label={intl.formatMessage(intlMessages.toggleUserListLabel)}
               aria-label={ariaLabel}
               icon="user"
-              className={cx(toggleBtnClasses)}
+              className={styles.button}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
             />
