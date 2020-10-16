@@ -115,7 +115,7 @@ body{
   outline-style: solid;
   z-index: 2;
   overflow: visible;
-  order: inherit;
+  order: 1;
 
   @include mq($small-only) {
     top: var(--navbar-height);
@@ -123,7 +123,7 @@ body{
 
   @include mq($medium-up) {
     flex: 0 15vw;
-    order: inherit;
+    order: 3;
     height: 100vh;
   }
 
