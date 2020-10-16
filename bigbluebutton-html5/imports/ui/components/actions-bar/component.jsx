@@ -8,6 +8,7 @@ import AudioControlsContainer from '../audio/audio-controls/container';
 import JoinVideoOptionsContainer from '../video-provider/video-button/container';
 import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions/container';
 import PresentationOptionsContainer from './presentation-options/component';
+import Button from '../button/component';
 
 class ActionsBar extends PureComponent {
   render() {
@@ -106,6 +107,19 @@ class ActionsBar extends PureComponent {
             )
             : null
           }
+          <Button
+              data-test="userListToggleButton"
+              // onClick={NavBar.handleToggleUserList}
+              ghost
+              circle
+              hideLabel
+              // label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+              // aria-label={ariaLabel}
+              icon="user"
+              // className={cx(toggleBtnClasses)}
+              // aria-expanded={isExpanded}
+              // accessKey={TOGGLE_USERLIST_AK}
+            />
         </div>
       </div>
     );
