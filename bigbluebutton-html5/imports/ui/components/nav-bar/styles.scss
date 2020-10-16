@@ -90,7 +90,10 @@
   right: var(--arrow-l-left);
   // End
   [dir="rtl"] & {
-    right: var(--arrow-r-left);
+    // right: var(--arrow-r-left);
+    // Edit by Aman
+    right: .5rem;
+    // End
     left: 0;
   }
 }
@@ -102,7 +105,10 @@
   right: var(--arrow-r-left);
   // End
   [dir="rtl"] & {
-    right: .5rem;
+    // right: .5rem;
+    // Edit by Aman
+    right: var(--arrow-r-left);
+    // End
     left: 0;
   }
 }
