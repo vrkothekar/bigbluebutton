@@ -10,6 +10,7 @@ import JoinVideoOptionsContainer from '../video-provider/video-button/container'
 import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions/container';
 import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
+import { defineMessages } from 'react-intl';
 
 const intlMessages = defineMessages({
   toggleUserListLabel: {
