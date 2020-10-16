@@ -22,6 +22,7 @@ import PingPongContainer from '/imports/ui/components/ping-pong/container';
 import MediaService from '/imports/ui/components/media/service';
 import ManyWebcamsNotifier from '/imports/ui/components/video-provider/many-users-notify/container';
 import { styles } from './styles';
+import { Session } from 'meteor/session';
 
 const MOBILE_MEDIA = 'only screen and (max-width: 40em)';
 const APP_CONFIG = Meteor.settings.public.app;
@@ -317,6 +318,16 @@ class App extends Component {
         requesterUserId={User.userId}
         meetingId={User.meetingId}
       />) : null);
+  }
+
+  componentDidMount() {
+    Session.set(
+      'openPanel',
+      Session.get('openPanel') !== ''
+        ? ''
+        : 'userlist',
+    );
+    Session.set('idChatOpen', '');
   }
 
   render() {
