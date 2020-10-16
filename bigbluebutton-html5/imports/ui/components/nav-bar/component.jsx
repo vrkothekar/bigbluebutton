@@ -90,29 +90,7 @@ class NavBar extends PureComponent {
 
     return (
       <div className={styles.navbar}>
-        <div className={styles.top}>
-          <div className={styles.left}>
-            {!isExpanded ? null
-              : <Icon iconName="left_arrow" className={styles.arrowLeft} />
-            }
-            <Button
-              data-test="userListToggleButton"
-              onClick={NavBar.handleToggleUserList}
-              ghost
-              circle
-              hideLabel
-              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              aria-label={ariaLabel}
-              icon="user"
-              className={cx(toggleBtnClasses)}
-              // aria-expanded={isExpanded}
-              aria-expanded={false}
-              accessKey={TOGGLE_USERLIST_AK}
-            />
-            {isExpanded ? null
-              : <Icon iconName="right_arrow" className={styles.arrowRight} />
-            }
-          </div>
+        <div className={styles.top}>          
           <div className={styles.center}>
             <h1 className={styles.presentationTitle}>{presentationTitle}</h1>
 
@@ -128,6 +106,27 @@ class NavBar extends PureComponent {
         <div className={styles.bottom}>
           <TalkingIndicatorContainer amIModerator={amIModerator} />
         </div>
+        <div className={styles.left}>
+            {!isExpanded ? null
+              : <Icon iconName="left_arrow" className={styles.arrowLeft} />
+            }
+            <Button
+              data-test="userListToggleButton"
+              onClick={NavBar.handleToggleUserList}
+              ghost
+              circle
+              hideLabel
+              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+              aria-label={ariaLabel}
+              icon="user"
+              className={cx(toggleBtnClasses)}
+              aria-expanded={isExpanded}
+              accessKey={TOGGLE_USERLIST_AK}
+            />
+            {isExpanded ? null
+              : <Icon iconName="right_arrow" className={styles.arrowRight} />
+            }
+          </div>
       </div>
     );
   }
