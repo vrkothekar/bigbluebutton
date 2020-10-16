@@ -67,7 +67,10 @@
 
 .right {
   position: absolute;
-  bottom: var(--sm-padding-x);
+  // Edit by Aman
+  // bottom: var(--sm-padding-x);
+  bottom: 1.2rem;
+  // End
   right: var(--sm-padding-x);
   left: auto;
 
