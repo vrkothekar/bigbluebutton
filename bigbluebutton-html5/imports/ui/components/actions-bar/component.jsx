@@ -72,7 +72,7 @@ class ActionsBar extends PureComponent {
     actionBarClasses[styles.mobileLayoutSwapped] = isLayoutSwapped && amIPresenter;
 
     const toggleBtnClasses = {};
-    toggleBtnClasses[styles.btn] = true;
+    toggleBtnClasses[styles.btnNav] = true;
     let ariaLabel = intl.formatMessage(intlMessages.toggleUserListAria);
 
     return (
@@ -148,7 +148,7 @@ class ActionsBar extends PureComponent {
               label={intl.formatMessage(intlMessages.toggleUserListLabel)}
               aria-label={ariaLabel}
               icon="user"
-              className={styles.button}
+              className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
             />
