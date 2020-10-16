@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Session } from 'meteor/session';
 import cx from 'classnames';
 import { styles } from './styles.scss';
 import DesktopShare from './desktop-share/component';
@@ -11,6 +12,15 @@ import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
 
 class ActionsBar extends PureComponent {
+  static handleToggleUserList() {
+    Session.set(
+      'openPanel',
+      Session.get('openPanel') !== ''
+        ? ''
+        : 'userlist',
+    );
+    Session.set('idChatOpen', '');
+  }
   render() {
     const {
       amIPresenter,
@@ -95,7 +105,7 @@ class ActionsBar extends PureComponent {
               <JoinVideoOptionsContainer />
             )
             : null}
-          
+
         </div>
         <div className={styles.right}>
           {isLayoutSwapped
@@ -109,7 +119,7 @@ class ActionsBar extends PureComponent {
           }
           <Button
               data-test="userListToggleButton"
-              // onClick={NavBar.handleToggleUserList}
+              onClick={ActionsBar.handleToggleUserList}
               ghost
               circle
               hideLabel
