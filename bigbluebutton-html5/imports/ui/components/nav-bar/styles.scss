@@ -85,7 +85,10 @@
 
 .arrowLeft {
   width: var(--lg-padding-y);
-  left: var(--arrow-l-left);
+  // left: var(--arrow-l-left);
+  // Edit by Aman
+  right: var(--arrow-l-left);
+  // End
   [dir="rtl"] & {
     right: var(--arrow-r-left);
     left: 0;
@@ -94,7 +97,10 @@
 
 .arrowRight {
   width: var(--md-padding-x);
-  left: var(--arrow-r-left);
+  // left: var(--arrow-r-left);
+  // Edit by Aman
+  right: var(--arrow-r-left);
+  // End
   [dir="rtl"] & {
     right: .5rem;
     left: 0;
