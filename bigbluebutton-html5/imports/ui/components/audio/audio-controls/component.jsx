@@ -23,6 +23,10 @@ const intlMessages = defineMessages({
   unmuteAudio: {
     id: 'app.actionsBar.unmuteLabel',
     description: 'Unmute audio button label',
+  },
+  endMeeting: {
+    id: 'app.actionsBar.endMeetingLabel',
+    description: 'End meeting button label',
   }
 });
 
@@ -117,8 +121,8 @@ class AudioControls extends PureComponent {
           className={styles.button, styles.endMeetingButton}
           onClick={handleCustomLogout}
           hideLabel
-          aria-label={intl.formatMessage(intlMessages.muteAudio)}
-          label={intl.formatMessage(intlMessages.muteAudio)}
+          aria-label={intl.formatMessage(intlMessages.endMeeting)}
+          label={intl.formatMessage(intlMessages.endMeeting)}
           color={'primary'}
           icon={'call-end'}
           size="lg"
