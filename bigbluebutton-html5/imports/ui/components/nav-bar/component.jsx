@@ -92,7 +92,7 @@ class NavBar extends PureComponent {
       <div className={styles.navbar}>
         <div className={styles.top}>
           <div className={styles.left}>
-            
+
           </div>
           <div className={styles.center}>
             <h1 className={styles.presentationTitle}>{presentationTitle}</h1>
@@ -104,7 +104,7 @@ class NavBar extends PureComponent {
           </div>
           <div className={styles.right}>
             {/* <SettingsDropdownContainer amIModerator={amIModerator} /> */}
-            {!isExpanded ? null
+            {/* {!isExpanded ? null
               : <Icon iconName="right_arrow" className={styles.arrowLeft} />
             }
             <Button
@@ -122,7 +122,7 @@ class NavBar extends PureComponent {
             />
             {isExpanded ? null
               : <Icon iconName="left_arrow" className={styles.arrowRight} />
-            }
+            } */}
           </div>
         </div>
         <div className={styles.bottom}>

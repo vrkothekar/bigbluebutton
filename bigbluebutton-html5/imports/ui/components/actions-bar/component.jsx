@@ -79,7 +79,7 @@ class ActionsBar extends PureComponent {
     return (
       <div className={styles.actionsbar}>
         <div className={styles.left}>
-          {/* <ActionsDropdown {...{
+          <ActionsDropdown {...{
             amIPresenter,
             amIModerator,
             isPollingEnabled,
@@ -90,7 +90,7 @@ class ActionsBar extends PureComponent {
             stopExternalVideoShare,
             isMeteorConnected,
           }}
-          /> */}
+          />
           {isPollingEnabled
             ? (
               <QuickPollDropdown
