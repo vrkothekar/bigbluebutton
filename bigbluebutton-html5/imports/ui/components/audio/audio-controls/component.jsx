@@ -116,8 +116,8 @@ class AudioControls extends PureComponent {
         <Button
           className={styles.button, styles.endMeetingButton}
           onClick={handleCustomLogout}
-          // aria-label="End Meeting"
-          // label="End Meeting"
+          aria-label={intl.formatMessage(intlMessages.muteAudio)}
+          label={intl.formatMessage(intlMessages.muteAudio)}
           color={'primary'}
           icon={'call-end'}
           size="lg"
