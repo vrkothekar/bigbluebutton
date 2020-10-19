@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
 import { styles } from './styles.scss';
@@ -28,14 +28,14 @@ export default (props) => {
           >
             <div className={styles.nameInitialWrapper}>
               <p>
-                {/* <FormattedMessage
+                <FormattedMessage
                   id="app.home.greeting"
                   description="Message to greet the user."
                   defaultMessage="Presenting..."
-                /> */}
+                />
                 A
               </p>
-            </div>            
+            </div>
           </div>
         </div>
       </CSSTransition>
