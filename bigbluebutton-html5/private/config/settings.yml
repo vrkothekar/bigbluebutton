@@ -272,7 +272,7 @@ public:
       rtl: false
   layout:
     autoSwapLayout: false
-    hidePresentation: true
+    hidePresentation: false
   media:
     stunTurnServersFetchAddress: "/bigbluebutton/api/stuns"
     cacheStunTurnServers: true

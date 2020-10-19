@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Session } from 'meteor/session';
-import cx from 'classnames';
+// import cx from 'classnames';
 import { withModalMounter } from '/imports/ui/components/modal/service';
 import withShortcutHelper from '/imports/ui/components/shortcut-help/service';
 import getFromUserSettings from '/imports/ui/services/users-settings';
 import { defineMessages, injectIntl } from 'react-intl';
-import Icon from '../icon/component';
+// import Icon from '../icon/component';
 import { styles } from './styles.scss';
-import Button from '../button/component';
+// import Button from '../button/component';
 import RecordingIndicator from './recording-indicator/container';
 import TalkingIndicatorContainer from '/imports/ui/components/nav-bar/talking-indicator/container';
 // import SettingsDropdownContainer from './settings-dropdown/container';
