@@ -25,7 +25,7 @@ const intlMessages = defineMessages({
     description: 'Unmute audio button label',
   },
   endMeeting: {
-    id: 'app.actionsBar.endMeetingLabel',
+    id: 'app.navBar.settingsDropdown.endMeetingLabel',
     description: 'End meeting button label',
   }
 });
