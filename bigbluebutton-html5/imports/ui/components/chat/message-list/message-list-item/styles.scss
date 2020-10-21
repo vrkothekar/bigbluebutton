@@ -63,6 +63,9 @@
   flex: 1;
   flex-flow: row;
   line-height: 1;
+  // Edit by Aman
+  justify-content: space-between;
+  // end
 
   & + .message {
     margin-top: 0;
@@ -82,7 +85,9 @@
 }
 
 .name {
-  color: var(--color-heading);
+  // color: var(--color-heading);
+  color: var(--color-primary);
+  font-weight: 400;
 }
 
 .logout {
@@ -111,12 +116,16 @@
 }
 
 .time {
+  // Edit by Aman
+  font-size: 90%;
+  color: var(--color-primary);
+  // end
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: 3.5rem;
-  color: var(--color-gray-light);
+  // color: var(--color-gray-light);
   text-transform: uppercase;
-  font-size: 75%;
+  // font-size: 75%;
   margin: 0 0 0 calc(var(--line-height-computed) / 2);
 
   [dir="rtl"] & {
