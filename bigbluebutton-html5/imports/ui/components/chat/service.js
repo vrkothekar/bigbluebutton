@@ -266,8 +266,7 @@ const htmlDecode = (input) => {
 const exportChat = (messageList) => {
   const { welcomeProp } = getWelcomeProp();
   const { loginTime } = Users.findOne({ userId: Auth.userID }, { fields: { loginTime: 1 } });
-  // const { welcomeMsg } = welcomeProp;
-  const { welcomeMsg } = 'Welcome to Shikshala';
+  const { welcomeMsg } = welcomeProp;
 
   const clearMessage = messageList.filter(message => message.message === PUBLIC_CHAT_CLEAR);
 
