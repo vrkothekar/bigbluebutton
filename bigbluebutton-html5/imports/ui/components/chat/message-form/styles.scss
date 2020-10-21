@@ -49,7 +49,10 @@
 }
 
 .input {
-  @include inputFocus(var(--color-blue-light));
+  // @include inputFocus(var(--color-blue-light));
+  // Edit by Aman
+  border-bottom: 1px solid var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
 
   flex: 1;
   background: #fff;
@@ -64,8 +67,8 @@
   font-size: var(--font-size-base);
   min-height: 2.5rem;
   max-height: 10rem;
-  border: 1px solid var(--color-gray-lighter);
-  box-shadow: 0 0 0 1px var(--color-gray-lighter);
+  // border: 1px solid var(--color-gray-lighter);
+  // box-shadow: 0 0 0 1px var(--color-gray-lighter);
 
   &:disabled,
   &[disabled] {
