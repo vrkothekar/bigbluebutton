@@ -101,7 +101,7 @@ class AudioControls extends PureComponent {
               accessKey={shortcuts.togglemute}
             />
           ) : null}
-        <Button
+        {!isVoiceUser ? (<Button
           className={cx(styles.button, inAudio || styles.btn)}
           onClick={inAudio ? handleLeaveAudio : handleJoinAudio}
           disabled={disable}
@@ -116,7 +116,7 @@ class AudioControls extends PureComponent {
           size="lg"
           circle
           accessKey={inAudio ? shortcuts.leaveaudio : shortcuts.joinaudio}
-        />
+        />) : null}
         <Button
           className={styles.button, styles.endMeetingButton}
           onClick={handleCustomLogout}
