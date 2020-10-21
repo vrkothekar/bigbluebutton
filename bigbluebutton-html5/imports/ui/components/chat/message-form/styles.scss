@@ -51,8 +51,9 @@
 .input {
   // @include inputFocus(var(--color-blue-light));
   // Edit by Aman
-  border-bottom: 1px solid var(--color-primary);
-  box-shadow: 0 0 0 1px var(--color-primary);
+  border: unset;
+  border-bottom: 2px solid var(--color-primary);
+  box-shadow: unset;
 
   flex: 1;
   background: #fff;
