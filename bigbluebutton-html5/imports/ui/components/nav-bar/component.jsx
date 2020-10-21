@@ -103,7 +103,7 @@ class NavBar extends PureComponent {
             />
           </div>
           <div className={styles.right}>
-            {/* <SettingsDropdownContainer amIModerator={amIModerator} /> */}
+            <SettingsDropdownContainer amIModerator={amIModerator} />
             {/* {!isExpanded ? null
               : <Icon iconName="right_arrow" className={styles.arrowLeft} />
             }
