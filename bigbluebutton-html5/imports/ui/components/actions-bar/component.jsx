@@ -40,6 +40,15 @@ class ActionsBar extends PureComponent {
     Session.set('idChatOpen', '');
   }
 
+  static handleToggleChatList() {
+    Session.set(
+      'openPanel',
+      Session.get('openPanel') !== ''
+        ? ''
+        : 'chat',
+    );
+  }
+
   render() {
     const {
       amIPresenter,
@@ -150,6 +159,20 @@ class ActionsBar extends PureComponent {
               aria-label={ariaLabel}
               icon="user"
               size="lg"
+              className={cx(toggleBtnClasses)}
+              // aria-expanded={isExpanded}
+              // accessKey={TOGGLE_USERLIST_AK}
+            />
+            <Button
+              data-test="userListToggleButton"
+              onClick={ActionsBar.handleToggleChatList}
+              ghost
+              circle
+              hideLabel
+              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+              aria-label={ariaLabel}
+              icon="user"
+              // size="lg"
               className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
