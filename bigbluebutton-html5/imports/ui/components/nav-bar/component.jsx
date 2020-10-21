@@ -11,7 +11,7 @@ import { styles } from './styles.scss';
 // import Button from '../button/component';
 import RecordingIndicator from './recording-indicator/container';
 import TalkingIndicatorContainer from '/imports/ui/components/nav-bar/talking-indicator/container';
-// import SettingsDropdownContainer from './settings-dropdown/container';
+import SettingsDropdownContainer from './settings-dropdown/container';
 
 
 const intlMessages = defineMessages({
