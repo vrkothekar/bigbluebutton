@@ -56,6 +56,24 @@
   flex-flow: column;
   overflow-x: hidden;
   width: calc(100% - 1.7rem);
+  // Edit by Aman
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 1rem;
+  &:after{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid #F5F5F5;
+    clear: both;
+    transform: rotate(180deg);
+  }
+  // End
 }
 
 .meta {
@@ -86,7 +104,7 @@
 
 .name {
   // color: var(--color-heading);
-  color: var(--color-primary);
+  color: #00796B;
   font-weight: 400;
 }
 
@@ -118,7 +136,7 @@
 .time {
   // Edit by Aman
   font-size: 90%;
-  color: var(--color-primary);
+  color: #00796B;
   // end
   flex-shrink: 0;
   flex-grow: 0;
