@@ -107,9 +107,15 @@
   }
 }
 
+// .moderator {
+//   border-radius: 5px;
+// }
+
+// Edit by Aman
 .moderator {
-  border-radius: 5px;
+  border-radius: 50%;
 }
+// End
 
 .presenter {
   &:before {
