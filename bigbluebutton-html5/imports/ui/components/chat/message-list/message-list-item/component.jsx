@@ -62,31 +62,31 @@ class MessageListItem extends Component {
     return hasNewMessage || hasUserChanged;
   }
 
-  // renderSystemMessage() {
-  //   const {
-  //     messages,
-  //     chatAreaId,
-  //     handleReadMessage,
-  //   } = this.props;
+  renderSystemMessage() {
+    const {
+      messages,
+      chatAreaId,
+      handleReadMessage,
+    } = this.props;
 
-  //   return (
-  //     <div className={styles.messages}>
-  //       {messages.map(message => (
-  //         message.text !== ''
-  //           ? (
-  //             <Message
-  //               className={(message.id ? styles.systemMessage : null)}
-  //               key={_.uniqueId('id-')}
-  //               text={message.text}
-  //               time={message.time}
-  //               chatAreaId={chatAreaId}
-  //               handleReadMessage={handleReadMessage}
-  //             />
-  //           ) : null
-  //       ))}
-  //     </div>
-  //   );
-  // }
+    return (
+      <div className={styles.messages}>
+        {messages.map(message => (
+          message.text !== ''
+            ? (
+              <Message
+                className={(message.id ? styles.systemMessage : null)}
+                key={_.uniqueId('id-')}
+                text={message.text}
+                time={message.time}
+                chatAreaId={chatAreaId}
+                handleReadMessage={handleReadMessage}
+              />
+            ) : null
+        ))}
+      </div>
+    );
+  }
 
   render() {
     const {
