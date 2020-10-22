@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { styles } from './styles';
 import UserParticipantsContainer from './user-participants/container';
-import UserMessages from './user-messages/component';
+// import UserMessages from './user-messages/component';
 import UserNotesContainer from './user-notes/container';
 import UserCaptionsContainer from './user-captions/container';
 import WaitingUsers from './waiting-users/component';
@@ -27,7 +27,7 @@ const propTypes = {
 const defaultProps = {
   compact: false,
 };
-const CHAT_ENABLED = Meteor.settings.public.chat.enabled;
+// const CHAT_ENABLED = Meteor.settings.public.chat.enabled;
 const ROLE_MODERATOR = Meteor.settings.public.user.role_moderator;
 
 class UserContent extends PureComponent {
@@ -38,8 +38,8 @@ class UserContent extends PureComponent {
       currentUser,
       setEmojiStatus,
       roving,
-      isPublicChat,
-      activeChats,
+      // isPublicChat,
+      // activeChats,
       pollIsOpen,
       forcePollOpen,
       hasBreakoutRoom,

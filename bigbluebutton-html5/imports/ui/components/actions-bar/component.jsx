@@ -22,6 +22,10 @@ const intlMessages = defineMessages({
     id: 'app.navBar.userListToggleBtnLabel',
     description: 'Toggle button label',
   },
+  titlePublic: {
+    id: 'app.chat.titlePublic',
+    description: 'Public chat title',
+  },
   toggleUserListAria: {
     id: 'app.navBar.toggleUserList.ariaLabel',
     description: 'description of the lists inside the userlist',
@@ -177,10 +181,10 @@ class ActionsBar extends PureComponent {
               ghost
               circle
               hideLabel
-              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              aria-label={ariaLabel}
-              icon="user"
-              // size="lg"
+              label={intl.formatMessage(intlMessages.titlePublic)}
+              aria-label={intl.formatMessage(intlMessages.titlePublic)}
+              icon="chat"
+              size="lg"
               className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
