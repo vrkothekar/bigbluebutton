@@ -14,6 +14,9 @@ import Button from '../button/component';
 
 import { defineMessages } from 'react-intl';
 
+const CHAT_CONFIG = Meteor.settings.public.chat;
+const PUBLIC_CHAT_KEY = CHAT_CONFIG.public_id;
+
 const intlMessages = defineMessages({
   toggleUserListLabel: {
     id: 'app.navBar.userListToggleBtnLabel',
@@ -46,6 +49,11 @@ class ActionsBar extends PureComponent {
       Session.get('openPanel') === 'chat'
         ? 'userlist'
         : 'chat',
+    );
+    Session.set('idChatOpen',
+        Session.get('openPanel') === 'chat'
+        ? PUBLIC_CHAT_KEY
+        : ''
     );
   }
 
