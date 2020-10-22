@@ -162,20 +162,6 @@ class ActionsBar extends PureComponent {
           }}
           />
           <Button
-              data-test="userListToggleButton"
-              onClick={ActionsBar.handleToggleUserList}
-              ghost
-              circle
-              hideLabel
-              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              aria-label={ariaLabel}
-              icon="user"
-              size="lg"
-              className={cx(toggleBtnClasses)}
-              // aria-expanded={isExpanded}
-              // accessKey={TOGGLE_USERLIST_AK}
-            />
-            <Button
               data-test="chatButton"
               onClick={ActionsBar.handleToggleChatList}
               ghost
@@ -186,6 +172,20 @@ class ActionsBar extends PureComponent {
               icon="chat"
               size="lg"
               className={cx(styles.button, styles.btn)}
+              // aria-expanded={isExpanded}
+              // accessKey={TOGGLE_USERLIST_AK}
+            />
+          <Button
+              data-test="userListToggleButton"
+              onClick={ActionsBar.handleToggleUserList}
+              ghost
+              circle
+              hideLabel
+              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+              aria-label={ariaLabel}
+              icon="user"
+              size="lg"
+              className={cx(toggleBtnClasses)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
             />
