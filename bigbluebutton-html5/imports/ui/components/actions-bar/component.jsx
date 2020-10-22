@@ -176,7 +176,7 @@ class ActionsBar extends PureComponent {
               // accessKey={TOGGLE_USERLIST_AK}
             />
             <Button
-              data-test="userListToggleButton"
+              data-test="chatButton"
               onClick={ActionsBar.handleToggleChatList}
               ghost
               circle
@@ -185,7 +185,7 @@ class ActionsBar extends PureComponent {
               aria-label={intl.formatMessage(intlMessages.titlePublic)}
               icon="chat"
               size="lg"
-              className={cx(toggleBtnClasses)}
+              className={cx(styles.button, styles.btn)}
               // aria-expanded={isExpanded}
               // accessKey={TOGGLE_USERLIST_AK}
             />

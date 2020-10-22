@@ -11,7 +11,7 @@ import { styles } from './styles.scss';
 // import Button from '../button/component';
 import RecordingIndicator from './recording-indicator/container';
 import TalkingIndicatorContainer from '/imports/ui/components/nav-bar/talking-indicator/container';
-import SettingsDropdownContainer from './settings-dropdown/container';
+// import SettingsDropdownContainer from './settings-dropdown/container';
 
 
 const intlMessages = defineMessages({
@@ -103,7 +103,7 @@ class NavBar extends PureComponent {
             />
           </div>
           <div className={styles.right}>
-            <SettingsDropdownContainer amIModerator={amIModerator} />
+            {/* <SettingsDropdownContainer amIModerator={amIModerator} /> */}
             {/* {!isExpanded ? null
               : <Icon iconName="right_arrow" className={styles.arrowLeft} />
             }
