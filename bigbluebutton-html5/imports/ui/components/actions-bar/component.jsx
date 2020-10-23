@@ -14,10 +14,17 @@ import Button from '../button/component';
 
 import { defineMessages } from 'react-intl';
 
+const CHAT_CONFIG = Meteor.settings.public.chat;
+const PUBLIC_CHAT_KEY = CHAT_CONFIG.public_id;
+
 const intlMessages = defineMessages({
   toggleUserListLabel: {
     id: 'app.navBar.userListToggleBtnLabel',
     description: 'Toggle button label',
+  },
+  titlePublic: {
+    id: 'app.chat.titlePublic',
+    description: 'Public chat title',
   },
   toggleUserListAria: {
     id: 'app.navBar.toggleUserList.ariaLabel',
@@ -38,6 +45,20 @@ class ActionsBar extends PureComponent {
         : 'userlist',
     );
     Session.set('idChatOpen', '');
+  }
+
+  static handleToggleChatList() {
+    Session.set(
+      'openPanel',
+      Session.get('openPanel') === 'chat'
+        ? 'userlist'
+        : 'chat',
+    );
+    Session.set('idChatOpen',
+        Session.get('openPanel') === 'chat'
+        ? PUBLIC_CHAT_KEY
+        : ''
+    );
   }
 
   render() {
@@ -140,6 +161,20 @@ class ActionsBar extends PureComponent {
             screenshareDataSavingSetting,
           }}
           />
+          <Button
+              data-test="chatButton"
+              onClick={ActionsBar.handleToggleChatList}
+              ghost
+              circle
+              hideLabel
+              label={intl.formatMessage(intlMessages.titlePublic)}
+              aria-label={intl.formatMessage(intlMessages.titlePublic)}
+              icon="chat"
+              size="lg"
+              className={cx(styles.button, styles.btn)}
+              // aria-expanded={isExpanded}
+              // accessKey={TOGGLE_USERLIST_AK}
+            />
           <Button
               data-test="userListToggleButton"
               onClick={ActionsBar.handleToggleUserList}
