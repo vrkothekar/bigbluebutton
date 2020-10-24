@@ -9,7 +9,7 @@ import QuickPollDropdown from './quick-poll-dropdown/component';
 import AudioControlsContainer from '../audio/audio-controls/container';
 import JoinVideoOptionsContainer from '../video-provider/video-button/container';
 import CaptionsButtonContainer from '/imports/ui/components/actions-bar/captions/container';
-import PresentationOptionsContainer from './presentation-options/component';
+// import PresentationOptionsContainer from './presentation-options/component';
 import Button from '../button/component';
 
 import { defineMessages } from 'react-intl';
@@ -110,6 +110,10 @@ class ActionsBar extends PureComponent {
             isSharingVideo,
             stopExternalVideoShare,
             isMeteorConnected,
+            // props for presentation
+            isLayoutSwapped,
+            toggleSwapLayout,
+            isThereCurrentPresentation
           }}
           />
           {isPollingEnabled
@@ -141,7 +145,7 @@ class ActionsBar extends PureComponent {
 
         </div>
         <div className={styles.right}>
-          {isLayoutSwapped
+          {/* {isLayoutSwapped
             ? (
               <PresentationOptionsContainer
                 toggleSwapLayout={toggleSwapLayout}
@@ -149,7 +153,7 @@ class ActionsBar extends PureComponent {
               />
             )
             : null
-          }
+          } */}
           <DesktopShare {...{
             handleShareScreen,
             handleUnshareScreen,

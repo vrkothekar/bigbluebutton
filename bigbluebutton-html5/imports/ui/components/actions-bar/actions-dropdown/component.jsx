@@ -74,6 +74,15 @@ const intlMessages = defineMessages({
     id: 'app.actionsBar.actionsDropdown.stopShareExternalVideo',
     description: 'Stop sharing external video button',
   },
+  // added for presentation
+  restorePresentationLabel: {
+    id: 'app.actionsBar.actionsDropdown.restorePresentationLabel',
+    description: 'Restore Presentation option label',
+  },
+  restorePresentationDesc: {
+    id: 'app.actionsBar.actionsDropdown.restorePresentationDesc',
+    description: 'button to restore presentation after it has been closed',
+  },
 });
 
 class ActionsDropdown extends PureComponent {
@@ -105,6 +114,10 @@ class ActionsDropdown extends PureComponent {
       isSharingVideo,
       isPollingEnabled,
       stopExternalVideoShare,
+      // props for presentation
+      isLayoutSwapped,
+      toggleSwapLayout,
+      isThereCurrentPresentation
     } = this.props;
 
     const {
@@ -173,6 +186,19 @@ class ActionsDropdown extends PureComponent {
           />
         )
         : null),
+        // new dropdown item added
+        (isLayoutSwapped
+          ? (
+            <DropdownListItem
+              icon="presentation"
+              label={intl.formatMessage(intlMessages.restorePresentationLabel)}
+              description={intl.formatMessage(intlMessages.restorePresentationDesc)}
+              key="presentation-toggle"
+              onClick={() => toggleSwapLayout()}
+              disabled={!isThereCurrentPresentation}
+            />
+          )
+          : null),
     ]);
   }
 
