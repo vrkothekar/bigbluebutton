@@ -40,7 +40,7 @@ class ActionsBar extends PureComponent {
   static handleToggleUserList() {
     Session.set(
       'openPanel',
-      Session.get('openPanel') !== ''
+      Session.get('openPanel') === 'userlist'
         ? ''
         : 'userlist',
     );
