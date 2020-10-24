@@ -60,7 +60,7 @@ const Chat = (props) => {
           <Button
             onClick={() => {
               Session.set('idChatOpen', '');
-              Session.set('openPanel', 'userlist');
+              Session.set('openPanel', '');
             }}
             aria-label={intl.formatMessage(intlMessages.hideChatLabel, { 0: title })}
             accessKey={HIDE_CHAT_AK}

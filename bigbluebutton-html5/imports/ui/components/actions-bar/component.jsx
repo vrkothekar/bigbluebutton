@@ -51,7 +51,7 @@ class ActionsBar extends PureComponent {
     Session.set(
       'openPanel',
       Session.get('openPanel') === 'chat'
-        ? 'userlist'
+        ? ''
         : 'chat',
     );
     Session.set('idChatOpen',

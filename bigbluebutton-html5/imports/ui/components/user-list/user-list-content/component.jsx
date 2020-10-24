@@ -6,7 +6,7 @@ import UserParticipantsContainer from './user-participants/container';
 import UserNotesContainer from './user-notes/container';
 import UserCaptionsContainer from './user-captions/container';
 import WaitingUsers from './waiting-users/component';
-import UserPolls from './user-polls/component';
+// import UserPolls from './user-polls/component';
 import BreakoutRoomItem from './breakout-room/component';
 
 const propTypes = {
@@ -89,13 +89,13 @@ class UserContent extends PureComponent {
             />
           ) : null
         }
-        <UserPolls
+        {/* <UserPolls
           isPresenter={currentUser.presenter}
           {...{
             pollIsOpen,
             forcePollOpen,
           }}
-        />
+        /> */}
         <BreakoutRoomItem isPresenter={currentUser.presenter} hasBreakoutRoom={hasBreakoutRoom} />
         <UserParticipantsContainer
           {...{
