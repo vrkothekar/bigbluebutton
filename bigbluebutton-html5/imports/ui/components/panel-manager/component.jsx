@@ -89,7 +89,7 @@ class PanelManager extends PureComponent {
       pollWidth: DEFAULT_PANEL_WIDTH,
       // userlistWidth: 180,
       // Edit by Aman
-      userlistWidth: 240,
+      userlistWidth: 340,
       // End
       noteWidth: DEFAULT_PANEL_WIDTH,
       captionsWidth: DEFAULT_PANEL_WIDTH,
